@@ -1,4 +1,4 @@
-// Change the path as need eg. path to Script.ps1 on your PC
+// Change the path as needed eg. path to Script.ps1 on your PC
 // Change only C://Users/USERNAME/Script.ps1 to your desired path, leave the quotation mark (' ') and other things as they are
 {
   "shell_cmd" : "powershell \"& 'C://Users/USERNAME/Script.ps1' -file '$file'\"", 
