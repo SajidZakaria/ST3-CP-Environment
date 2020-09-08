@@ -9,3 +9,8 @@ A simple yet powerful Competitive Programming environment setup using PowerShell
         Set-ExecutionPolicy RemoteSigned
         ```
   3. Add the Build System (provided here) in Sublime Text 3. Also copy the Script.ps1 file and change the path in Build System accordingly.
+  
+## Disclaimer for setting paths
+  It is highly recommended that you keep the syntaxes as they are. Change the paths where necessary. Don't change the placement of the quotation marks and other syntax as it is cruicial. You should also look out for:
+  * Don't use backslash for paths. Eg. C://Users/path is correct while C:\\Users\path is NOT
+  * Don't forget the double slashes after C eg. C:// (or any local drives you're using)
