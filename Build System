@@ -1,4 +1,4 @@
-#Change the path as need eg. path to Script.ps1 on your PC
+// Change the path as need eg. path to Script.ps1 on your PC
 {
   "shell_cmd" : "powershell C:/Users/USERNAME/Script.ps1 -file '$file'", 
   "selector" : "source.c,source.cpp,source.c++",
