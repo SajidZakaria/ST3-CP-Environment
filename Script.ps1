@@ -2,8 +2,13 @@ param($file)
 
 g++ -std=c++17 $file
 
-$input = 'C://Users/najib/Documents/Coding/input.txt'
-$output = 'C://Users/najib/Documents/Coding/output.txt'
+# change the paths according to your input and output files
+
+$input = 'C://Users/USERNAME/Documents/Coding/input.txt'
+$output = 'C://Users/USERNAME/Documents/Coding/output.txt'
+
+# TimeoutTime in Seconds, change according to your need
+# MaxOutputSize in Megabytes, change according to your need
 
 $TimeoutTime = 5
 $MaxOutputSize = 1
