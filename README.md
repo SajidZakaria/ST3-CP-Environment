@@ -2,7 +2,7 @@
 A simple yet powerful Competitive Programming environment setup using PowerShell and Sublime Text 3
 
 ## Installation procedure (Brief for now):
-  1. Install GCC/G++ compiler and set Variable Path (Or Clang or any other, change the Build System accordingly)
+  1. Install GCC/G++ compiler and set Variable Path (Or Clang or any other, change the Script accordingly)
   2. Enable powershell scripting in Windows.
         Open powershell as Administrator. Enter the following command, wait a bit, and confirm whatever that comes.
         ```
