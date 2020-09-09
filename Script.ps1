@@ -16,7 +16,7 @@ $MaxOutputSize = 1
 $BeginTime = Get-Date
 $flag = 0
 
-$p = Start-Process "a.exe" -RedirectStandardInput $input -RedirectStandardOutput $output -NoNewWindow -passthru
+$p = Start-Process ./a.exe -RedirectStandardInput $input -RedirectStandardOutput $output -NoNewWindow -passthru
 
 While (-not $p.HasExited -And $p -ne $null) {
     $EndTime = Get-Date
