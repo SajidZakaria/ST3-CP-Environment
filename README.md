@@ -22,9 +22,9 @@ A strong Competitive Programming Environment using Sublime Text 3. This build wo
   
   As they are variables, you can change them as you want to eg. You might want to change the paths. The default MaxOutputSize 1MB prints about 10^6 characters, so when you are participating in contests like FB HackerCup or Google CodeJam, you might want to increase this limit.
 
-## Installation procedure (Brief for now):
+## Installation procedure:
   1. Install GCC/G++ compiler and set Variable Path (Or Clang or any other, change the Script accordingly)
-  2. Enabling Powershell Scripting in Windows
+  2. Enabling PowerShell Scripting in Windows
         * Open PowerShell as Administrator. Enter the following command, wait a bit, and confirm whatever that comes.
         ```
         Set-ExecutionPolicy RemoteSigned
