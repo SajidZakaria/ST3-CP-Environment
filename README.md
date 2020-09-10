@@ -15,7 +15,7 @@ This build works almost the same as traditional builds, except it uses PowerShel
   * **$input**: Path to the input file
   * **$output**: Path to the output file
   * **$TimeoutTime**: Time limit in seconds, after which the process will terminate automatically.
-  * **$MaxOutputSize**: in Megabytes, largest amount of data the program can print to the output file, after exceeding which, the process will terminate automatically, as a safety measure.//
+  * **$MaxOutputSize**: in Megabytes, largest amount of data the program can print to the output file, after exceeding which, the process will terminate automatically, as a safety measure. \
   As they are variables, you can change them as you want to eg. You might want to change the paths. The default MaxOutputSize 1MB prints about 10^6 characters, so when you are participating in contests like FB HackerCup or Google CodeJam, you might want to increase this limit.
 
 ## Installation procedure (Brief for now):
