@@ -6,7 +6,7 @@ A strong Competitive Programming Environment using Sublime Text 3. This build wo
   2. In case of infinite printing(caused by infinite loops), the output file becomes huge, makes the pc slow or totally hang, a restart might be needed to fix this.
 
 ## Features of this build:
-  1. Uses file input / output.
+  1. Uses file i/o.
   2. Has a timeout feature, terminates process after hitting timeout.
   3. Has an output size limit, terminates program when the output generated is out of control.
   4. Easily customizable.
