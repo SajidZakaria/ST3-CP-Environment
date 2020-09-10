@@ -1,5 +1,5 @@
 # ST3-CP-Environment
-This build works almost the same as traditional builds, except it uses PowerShell. Which makes it even more, umm.. Powerful.
+A strong Competitive Programming Environment using Sublime Text 3. This build works almost the same as traditional builds, except it uses PowerShell. Which makes it even more, umm.. Powerful.
 
 ## Problems of other builds:
   1. Doesn't have timeout. You have to manually end the task when a program takes too long or falls into some infinite loop.
