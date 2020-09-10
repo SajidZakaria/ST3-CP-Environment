@@ -25,11 +25,11 @@ A strong Competitive Programming Environment using Sublime Text 3. This build wo
 ## Installation procedure:
   1. Install GCC/G++ compiler and set Variable Path (Or Clang or any other, change the Script accordingly)
   2. Getting PowerShell ready
-        * **Enable PowerShell Scripting**: Open PowerShell as Administrator. Enter the following command, wait a bit, and confirm whatever that comes.
+        * **Enable PowerShell Scripting:** Open PowerShell as Administrator. Enter the following command, wait a bit, and confirm whatever that comes.
         ```
         Set-ExecutionPolicy RemoteSigned
         ```
-        * **Speed-up PowerShell**: Enter the following commands. This will take a few minutes to finish.
+        * **Speed-up PowerShell:** Enter the following commands. This will take a few minutes to finish.
         ```
         Set-Alias ngen (Join-Path ([Runtime.InteropServices.RuntimeEnvironment]::GetRuntimeDirectory()) ngen.exe)
         ngen update
