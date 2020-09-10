@@ -1,6 +1,10 @@
 # ST3-CP-Environment
 A simple yet powerful Competitive Programming environment setup using PowerShell and Sublime Text 3
 
+## Features of this build:
+  1. Has a timeout feature, terminates process after hitting timeout.
+  2. Has a output size limit feature, terminates program when the output generated is out of control.
+
 ## Installation procedure (Brief for now):
   1. Install GCC/G++ compiler and set Variable Path (Or Clang or any other, change the Script accordingly)
   2. Enabling Powershell Scripting in Windows
