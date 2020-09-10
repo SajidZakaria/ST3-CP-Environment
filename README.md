@@ -1,6 +1,10 @@
 # ST3-CP-Environment
 A simple yet powerful Competitive Programming environment setup using PowerShell and Sublime Text 3
 
+## Problems of other builds:
+  1. Doesn't have timeout. You have to manually end the task when a program takes too long or falls into some infinite loop.
+  2. In case of infinite printing(caused by infinite loops), the output file becomes huge, makes the pc slow or totally hang, a restart might be needed to fix this.
+
 ## Features of this build:
   1. Has a timeout feature, terminates process after hitting timeout.
   2. Has a output size limit feature, terminates program when the output generated is out of control.
