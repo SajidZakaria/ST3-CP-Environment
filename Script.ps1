@@ -30,6 +30,7 @@ $block = {
     $p = iex $a;
     $p.ExitCode
 }
+
 $PS = [PowerShell]::Create()
 $PS.AddScript($block) | Out-NULL
 $PS.AddArgument($command) | Out-NULL
@@ -66,6 +67,5 @@ if($result[0] -ne 0) {
     Write-Host "RUNTIME ERROR"
     Write-Host "Process Terminated with exit code", $result[0]
 }
-
 
 exit
