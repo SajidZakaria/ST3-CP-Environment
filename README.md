@@ -34,7 +34,12 @@ A strong Competitive Programming Environment using Sublime Text 3. This build wo
         Set-Alias ngen (Join-Path ([Runtime.InteropServices.RuntimeEnvironment]::GetRuntimeDirectory()) ngen.exe)
         ngen update
         ```
-  3. Add the Build System (provided here) in Sublime Text 3. Also copy the Script.ps1 file and change the path in Build System accordingly.
+  3. Clone the repository or download as zip (To avoid the hassle of creating new files).
+  4. Create a new Build System in Sublime Text 3 using the code given in Build.txt file. Also copy the Script.ps1 file and change the path in Build System      accordingly.
+  5. Set the paths of input and output files in Script.ps1
+  6. Run fix.reg
+  7. Optionally, to make the builds faster, you can precompile bits/stdc++.h (More on this here: https://codeforces.com/blog/entry/79026?#comment-644988)
+  This build uses c++ 17, so make sure you update your compiler. Or change the script to use older versions.
 
 ## What does it cost:
    Probably a few hundred milliseconds per run, for the sake of convenience.
