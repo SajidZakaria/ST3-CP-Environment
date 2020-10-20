@@ -38,8 +38,3 @@ A strong Competitive Programming Environment using Sublime Text 3. This build wo
 
 ## What does it cost:
    Probably a few hundred milliseconds per run, for the sake of convenience.
-
-## Disclaimer for setting paths (for Build System and Script files)
-  It is highly recommended that you keep the syntaxes as they are. Change the paths where necessary. Don't change the placement of the quotation marks and other syntaxes as they are cruicial for successful execution. You should also look out for:
-  * Don't use backslash for paths, both in the build and the script eg. C://Users/path is correct while C:\\Users\path is NOT
-  * Don't forget the double slashes after C eg. C:// (or any local drives you're using)
