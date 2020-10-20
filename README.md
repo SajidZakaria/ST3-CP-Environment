@@ -37,7 +37,7 @@ A strong Competitive Programming Environment using Sublime Text 3. This build wo
   3. Add the Build System (provided here) in Sublime Text 3. Also copy the Script.ps1 file and change the path in Build System accordingly.
 
 ## What does it cost:
-   Probably a few hundred milliseconds per run, for the sake of convinience.
+   Probably a few hundred milliseconds per run, for the sake of convenience.
 
 ## Disclaimer for setting paths (for Build System and Script files)
   It is highly recommended that you keep the syntaxes as they are. Change the paths where necessary. Don't change the placement of the quotation marks and other syntaxes as they are cruicial for successful execution. You should also look out for:
