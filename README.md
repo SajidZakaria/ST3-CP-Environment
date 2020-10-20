@@ -12,7 +12,7 @@ A strong Competitive Programming Environment using Sublime Text 3. This build wo
   4. Easily customizable.
 
 ## How it works:
-  The build system calls PowerShell through CMD, then PowerShell runs Script.ps1, which then executes the entire process. So both the Script.ps1 file is needed to be in its required path.
+  The build system calls PowerShell through CMD, then PowerShell runs Script.ps1, which then executes the entire process. So the Script.ps1 file is needed to be in its required path.
 
 ## Variables in the script:
   * **$input**: Path to the input file
