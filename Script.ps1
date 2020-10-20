@@ -12,8 +12,9 @@ $TimeoutTime = 5
 $MaxOutputSize = 2
 
 ###################################################################################
-    
-$command = 'Start-Process ' + $PATH + '\a.exe' + ' -RedirectStandardInput ' + "'$input'"
+
+$PATH = $PATH + '\a.exe'
+$command = 'Start-Process ' + "'$PATH'" + ' -RedirectStandardInput ' + "'$input'"
 $command = $command + ' -RedirectStandardOutput ' + "'$output'" + ' -NoNewWindow -Wait -passthru'
 
 g++ -std=c++17 $file
