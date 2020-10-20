@@ -29,7 +29,7 @@ A strong Competitive Programming Environment using Sublime Text 3. This build wo
         ```
         Set-ExecutionPolicy RemoteSigned
         ```
-        * **Speed-up PowerShell:** Enter the following commands. This will take a few minutes to finish.
+        * **Speed-up PowerShell:** Enter the following two commands one after another. This might take a few minutes to finish.
         ```
         Set-Alias ngen (Join-Path ([Runtime.InteropServices.RuntimeEnvironment]::GetRuntimeDirectory()) ngen.exe)
         ngen update
