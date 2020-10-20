@@ -1,4 +1,3 @@
-# In development
 # ST3-CP-Environment
 A strong Competitive Programming Environment using Sublime Text 3. This build works almost the same as traditional builds, except it uses PowerShell. Which makes it even more, umm.. Powerful.
 
