@@ -18,7 +18,7 @@ A strong Competitive Programming Environment using Sublime Text 3. This build wo
 ## Variables in the script:
   * **$input**: Path to the input file
   * **$output**: Path to the output file
-  * **$TimeoutTime**: Time limit in seconds, after which the process will terminate automatically.
+  * **$TimeoutTime**: Time limit in seconds, after which the process will terminate automatically. Set the time 1 or 2 seconds more than what you actually want (as building takes close to 1 second).
   * **$MaxOutputSize**: in Megabytes, largest amount of data the program can print to the output file, after exceeding which, the process will terminate automatically, as a safety measure. 
   
   As they are variables, you can change them as you want to eg. You might want to change the paths. The default MaxOutputSize 1MB prints about 10^6 characters, so when you are participating in contests like FB HackerCup or Google CodeJam, you might want to increase this limit.
