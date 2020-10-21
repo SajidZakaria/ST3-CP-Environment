@@ -41,7 +41,7 @@ A strong Competitive Programming Environment using Sublime Text 3. This build wo
   7. Optionally, to make the builds faster, you can precompile bits/stdc++.h (More on this here: https://codeforces.com/blog/entry/79026?#comment-644988)
   8. For convenience, make sure to enable save on build (Tools -> Save All on Build).
   
-  This build uses c++ 17, so make sure you update your compiler. Or change the script to use older versions.
+  This build uses C++ 17, so make sure you update your compiler. Or change the script to use older versions.
 
 ## What does it cost:
    Probably a few hundred milliseconds per run, for the sake of convenience.
