@@ -9,7 +9,8 @@ A strong Competitive Programming Environment using Sublime Text 3. This build wo
   1. Uses file i/o.
   2. Has a timeout feature, terminates process after hitting timeout.
   3. Has an output size limit, terminates program when the output generated is out of control.
-  4. Easily customizable.
+  4. Terminates immediately after a runtime error occurs. (Normally Windows takes a lot longer)
+  5. Easily customizable.
 
 ## How it works:
   The build system calls PowerShell through CMD, then PowerShell runs Script.ps1, which then executes the entire process. So the Script.ps1 file is needed to be in its required path.
