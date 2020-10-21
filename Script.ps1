@@ -9,7 +9,7 @@ param($file, $PATH)
 $input = 'C:\Users\najib\Documents\Coding\input.txt'
 $output = 'C:\Users\najib\Documents\Coding\output.txt'
 $TimeoutTime = 5
-$MaxOutputSize = 2
+$MaxOutputSize = 1
 
 ###################################################################################
 
