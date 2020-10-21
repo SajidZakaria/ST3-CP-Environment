@@ -35,7 +35,7 @@ A strong Competitive Programming Environment using Sublime Text 3. This build wo
         ngen update
         ```
   3. Clone the repository or download as zip (To avoid the hassle of creating new files).
-  4. Create a new Build System in Sublime Text 3 using the code given in Build.txt file. Also copy the Script.ps1 file and change the path in Build System      accordingly.
+  4. Create a new Build System in Sublime Text 3 using the code given in Build.txt file. Also change the path in the Build System according to where you put Script.ps1 file.
   5. Set the paths of input and output files in Script.ps1
   6. Run fix.reg
   7. Optionally, to make the builds faster, you can precompile bits/stdc++.h (More on this here: https://codeforces.com/blog/entry/79026?#comment-644988)
