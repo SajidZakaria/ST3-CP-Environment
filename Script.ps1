@@ -17,6 +17,9 @@ $PATH = $PATH + '\a.exe'
 $command = 'Start-Process ' + "'$PATH'" + ' -RedirectStandardInput ' + "'$input'"
 $command = $command + ' -RedirectStandardOutput ' + "'$output'" + ' -NoNewWindow -Wait -passthru'
 
+$proc = Get-Process a -ErrorAction SilentlyContinue
+if($proc) {$proc | kill}
+
 g++ -std=c++17 $file
 $BeginTime = Get-Date
 $MaxOutputSize = $MaxOutputSize
