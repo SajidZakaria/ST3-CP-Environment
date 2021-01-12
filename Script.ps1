@@ -6,10 +6,10 @@ param($file, $PATH)
 # TimeoutTime in Seconds, change according to your need
 # MaxOutputSize in Megabytes, change according to your need
 
-$input = 'C:\Users\najib\Documents\Coding\input.txt'
-$output = 'C:\Users\najib\Documents\Coding\output.txt'
-$TimeoutTime = 5
-$MaxOutputSize = 1
+$input = 'D:\CP\input.txt'
+$output = 'D:\CP\output.txt'
+$TimeoutTime = 10
+$MaxOutputSize = .5
 
 ###################################################################################
 
@@ -19,6 +19,8 @@ $command = $command + ' -RedirectStandardOutput ' + "'$output'" + ' -NoNewWindow
 
 $proc = Get-Process a -ErrorAction SilentlyContinue
 if($proc) {$proc | kill}
+
+Clear-Content $output
 
 g++ -std=c++17 $file
 $BeginTime = Get-Date
