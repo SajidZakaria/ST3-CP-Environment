@@ -43,6 +43,8 @@ $PS.AddArgument($command) | Out-NULL
 
 $BeginTime = Get-Date
 
+Set-ItemProperty "HKCU:\Software\Microsoft\Windows\Windows Error Reporting" -Name DontShowUI -Value 1
+
 $job = $PS.BeginInvoke() 
 
 while(-Not $job.IsCompleted) {
@@ -73,5 +75,7 @@ if($result[0] -ne 0) {
     Write-Host "RUNTIME ERROR"
     Write-Host "Process Terminated with exit code", $result[0]
 }
+
+Set-ItemProperty "HKCU:\Software\Microsoft\Windows\Windows Error Reporting" -Name DontShowUI -Value 0
 
 exit
