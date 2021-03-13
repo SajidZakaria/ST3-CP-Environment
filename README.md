@@ -35,7 +35,7 @@ A strong Competitive Programming Environment using Sublime Text 3. This build wo
         Set-Alias ngen (Join-Path ([Runtime.InteropServices.RuntimeEnvironment]::GetRuntimeDirectory()) ngen.exe)
         ngen update
         ```
-  3. Clone the repository or download as zip (To avoid the hassle of creating new files).
+  3. Clone the repository or download as zip and extract (To avoid the hassle of creating new files).
   4. Create a new Build System in Sublime Text 3 using the code given in Build.txt file. Also change the path in the Build System according to where you put Script.ps1 file.
   5. Set the paths of input and output files in Script.ps1
   6. Run fix.reg (fixes problem with runtime errors).
