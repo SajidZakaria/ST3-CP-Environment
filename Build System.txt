@@ -1,5 +1,6 @@
-// Change the path as needed eg. path to Script.ps1 on your PC
-// Change only C://Users/USERNAME/Script.ps1 to your desired path, leave the quotation mark (' ') and other things as they are
+// Change the path as needed eg. path to Script.ps1 on your PC.
+// Change only C://Users/USERNAME/Script.ps1 to your desired path, leave the quotation mark (' ') and other things as they are. MAKE SURE the path uses "forward slash" ('/') instead of backward ('\')
+
 {
   "shell_cmd" : "powershell \"& 'C://Users/najib/Script.ps1' -file '$file' -PATH '$file_path'\"", 
   "selector" : "source.c,source.cpp,source.c++",
