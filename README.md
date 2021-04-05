@@ -1,6 +1,6 @@
 # ST3-CP-Environment
 
-## April 5, 2021: Update with many improvements. Please follow the new procedure.
+## April 5, 2021: Update with many improvements, including significant speed gain. Please follow the new procedure.
 
 A strong Competitive Programming Environment using Sublime Text 3. This build works almost the same as traditional builds, except it uses PowerShell. Which makes it even more, umm.. Powerful.
 
@@ -40,7 +40,7 @@ A strong Competitive Programming Environment using Sublime Text 3. This build wo
         ```
   3. Clone the repository or download as zip and extract (To avoid the hassle of creating new files).
   4. Create a new Build System in Sublime Text 3 using the code given in Build.txt file. Also change the path in the Build System according to where you put Script.ps1 file.
-  5. Keep "script.bat" and "running.txt" files in the same directory as "Script.ps1"
+  5. Keep "script.bat" file in the same directory as "Script.ps1"
   6. Set the paths of input and output files in Script.ps1
   7. Run fix.reg (fixes problems with runtime errors).
   8. Optionally, to make the builds faster, you can precompile bits/stdc++.h (More on this here: https://codeforces.com/blog/entry/79026?#comment-644988)
