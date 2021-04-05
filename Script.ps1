@@ -1,81 +1,97 @@
 param($file, $PATH)
 
 ###################################################################################
-
 # change the paths of $input and $output according to your input and output files
 # TimeoutTime in Seconds, change according to your need
 # MaxOutputSize in Megabytes, change according to your need
 
-$input = 'D:\CP\input.txt'
-$output = 'D:\CP\output.txt'
-$TimeoutTime = 10
-$MaxOutputSize = .5
-
+$input = 'C:\Users\USER\Documents\Cod ing\input.txt'
+$output = 'C:\Users\USER\Documents\Cod ing\output.txt'
+$TimeoutTime = 5
+$MaxOutputSize = 1MB
 ###################################################################################
 
-$PATH = $PATH + '\a.exe'
-$command = 'Start-Process ' + "'$PATH'" + ' -RedirectStandardInput ' + "'$input'"
-$command = $command + ' -RedirectStandardOutput ' + "'$output'" + ' -NoNewWindow -Wait -passthru'
 
-$proc = Get-Process a -ErrorAction SilentlyContinue
-if($proc) {$proc | kill}
+                        ### Cancel Previous Processes ###
+###################################################################################
+$procs = Get-Content "$PSScriptRoot\running.txt" -ErrorAction SilentlyContinue
+
+Foreach($proc in $procs) {
+    Stop-Process -ID $proc -Force -ErrorAction SilentlyContinue
+}
 
 Clear-Content $output
+@("$PID") +  (Get-Content "$PSScriptRoot\running.txt" -ErrorAction SilentlyContinue) | Set-Content "$PSScriptRoot\running.txt" -ErrorAction SilentlyContinue
 
-g++ -std=c++17 $file
-$BeginTime = Get-Date
-$MaxOutputSize = $MaxOutputSize
+$proc = Get-Process a -ErrorAction SilentlyContinue;
+if($proc) {$proc | kill}
+###################################################################################
 
+
+                        ### Prepare Current Build ###
+###################################################################################
+$PATH = $PATH + '\a.exe';
+
+$inputP = "`"$input`""
+$outputP = "`"$output`""
+
+$MaxOutputSize = [int]$MaxOutputSize
+
+g++ -std=c++17 "$file"
 if($LastExitCode -ne 0) {
     Write-Host "[ERROR in Compilation]"
-    exit
+    exit;
 }
-
-$block = {
-    param([string]$a)
-    $p = iex $a;
-    $p.ExitCode
-}
-
-$PS = [PowerShell]::Create()
-$PS.AddScript($block) | Out-NULL
-$PS.AddArgument($command) | Out-NULL
-
-$BeginTime = Get-Date
 
 Set-ItemProperty "HKCU:\Software\Microsoft\Windows\Windows Error Reporting" -Name DontShowUI -Value 1
 
-$job = $PS.BeginInvoke() 
+$timer = [Diagnostics.Stopwatch]::StartNew()
+###################################################################################
 
-while(-Not $job.IsCompleted) {
-    $EndTime = Get-Date
-    $CurDuration = (New-TimeSpan -Start $BeginTime -End $EndTime).TotalSeconds
-    $CurDuration = [math]::Round($CurDuration, 1)
 
-    $OutputSize = (Get-Item $output).length/1MB
+$p = Start-Process $PSScriptRoot\script.bat -ArgumentList $inputP,$outputP -NoNewWindow -Passthru
 
+while(-not $p.HasExited -And $p -ne $null) {
+    $OutputSize = (Get-Item $output).length
     if($OutputSize -gt $MaxOutputSize) {
+        $timer.stop()
+        $execTime = [math]::Round($timer.Elapsed.TotalSeconds, 2)
+        if($p.HasExited) {break}
+        $p | kill -ErrorAction SilentlyContinue
         $proc = Get-Process a -ErrorAction SilentlyContinue
-        if($proc) {$proc | kill}
+        $proc | kill -ErrorAction SilentlyContinue
+
         Write-Host -NoNewline "[Output limit reached. Process terminated: ";
-        Write-Host -NoNewline($CurDuration); Write-Host ("s]"); exit
+        Write-Host -NoNewline($execTime); Write-Host ("s]");
+
+        Clear-Content "$PSScriptRoot\running.txt"
+        exit
     }
 
-    if(($CurDuration - .5) -ge $TimeoutTime) {
-        $proc = Get-Process a -ErrorAction SilentlyContinue
-        if($proc) {$proc | kill}
+    if($timer.Elapsed.TotalSeconds -ge $TimeoutTime) {
+        $timer.stop()
+        $execTime = [math]::Round($timer.Elapsed.TotalSeconds, 2)
+        if($p.HasExited) {break}
+        $p | kill -ErrorAction SilentlyContinue
         Write-Host -NoNewline "[Process terminated due to timeout: "; 
-        Write-Host -NoNewline($TimeoutTime); Write-Host ("s]"); exit
+        Write-Host -NoNewline($execTime); Write-Host ("s]");
+
+        Out-Null
+
+        $proc = Get-Process a -ErrorAction SilentlyContinue
+        $proc | kill -ErrorAction SilentlyContinue
+        Clear-Content "$PSScriptRoot\running.txt"
+        exit
     }
 }
 
-$tim = Get-Date
-$result = $PS.EndInvoke($job)
-if($result[0] -ne 0) {
-    Write-Host "RUNTIME ERROR"
-    Write-Host "Process Terminated with exit code", $result[0]
-}
+$p | kill -ErrorAction SilentlyContinue
+$timer.stop()
+$execTime = [math]::Round($timer.Elapsed.TotalSeconds, 2)
+Write-Host -NoNewline "[Process executed in: $execTime"
+Write-Host "s]"
 
 Set-ItemProperty "HKCU:\Software\Microsoft\Windows\Windows Error Reporting" -Name DontShowUI -Value 0
 
+Clear-Content "$PSScriptRoot\running.txt"
 exit
