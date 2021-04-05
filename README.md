@@ -1,6 +1,6 @@
 # ST3-CP-Environment
 
-#April 5, 2021: Update with many improvements. Please follow the new procedure.
+## April 5, 2021: Update with many improvements. Please follow the new procedure.
 
 A strong Competitive Programming Environment using Sublime Text 3. This build works almost the same as traditional builds, except it uses PowerShell. Which makes it even more, umm.. Powerful.
 
