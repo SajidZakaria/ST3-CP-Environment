@@ -29,7 +29,7 @@ A strong Competitive Programming Environment using Sublime Text 3. This build wo
 ## Installation procedure:
   1. Install GCC/G++ compiler and set Variable Path (Or Clang or any other, change the Script accordingly)
   2. Getting PowerShell ready
-        * **Enable PowerShell Scripting:** Open PowerShell as Administrator. Enter the following command, wait a bit, and confirm whatever that comes. PC Restart recommended afterwards.
+        * **Enable PowerShell Scripting:** Open PowerShell as Administrator. Enter the following command. On the response, press A and Enter. PC Restart recommended afterwards.
         ```
         Set-ExecutionPolicy RemoteSigned
         ```
