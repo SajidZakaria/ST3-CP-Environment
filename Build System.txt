@@ -2,7 +2,7 @@
 // Change only C://Users/USERNAME/Script.ps1 to your desired path, leave the quotation mark (' ') and other things as they are. MAKE SURE the path uses "forward slash" ('/') instead of backward ('\')
 
 {
-  "shell_cmd" : "powershell \"& 'C://Users/najib/Script.ps1' -file '$file' -PATH '$file_path'\"", 
+  "shell_cmd" : "powershell -ExecutionPolicy Bypass \"& 'C://Users/najib/Script.ps1' -file '$file' -PATH '$file_path'\"", 
   "selector" : "source.c,source.cpp,source.c++",
   "shell": true,
   "working_dir" : "$file_path"
