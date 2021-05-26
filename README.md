@@ -38,8 +38,8 @@ A strong Competitive Programming Environment using Sublime Text 3. This build wo
   
   This build uses C++ 17, so make sure you update your compiler. Or change the script to use older versions.
 
-  ***Optional:***:
-  * **Speed-up PowerShell:** In some cases powershell startup time might be too slow. To fix this, enter the following two commands one after another. This might take a few minutes to finish.
+  ***Optional:***
+  * **Speed-up PowerShell:** In some cases powershell startup time might be too slow. To fix this, enter the following two commands one after another. This might take a few minutes to finish. </br>
         ```
         Set-Alias ngen (Join-Path ([Runtime.InteropServices.RuntimeEnvironment]::GetRuntimeDirectory()) ngen.exe)
         ngen update
