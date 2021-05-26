@@ -28,25 +28,22 @@ A strong Competitive Programming Environment using Sublime Text 3. This build wo
 
 ## Installation procedure:
   1. Install GCC/G++ compiler and set Variable Path (Or Clang or any other, change the Script accordingly)
-  2. Getting PowerShell ready
-        * **Enable PowerShell Scripting:** Open PowerShell as Administrator. Enter the following command. On the response, press A and Enter. PC Restart recommended afterwards.
-        ```
-        Set-ExecutionPolicy RemoteSigned
-        ```
-        * **Speed-up PowerShell:** Enter the following two commands one after another. This might take a few minutes to finish.
+  2. Clone the repository or download as zip and extract (To avoid the hassle of creating new files).
+  3. Create a new Build System in Sublime Text 3 using the code given in Build.txt file. Also change the path in the Build System according to where you put Script.ps1 file.
+  4. Keep "script.bat" file in the same directory as "Script.ps1"
+  5. Set the paths of input and output files in Script.ps1
+  6. Run fix.reg (fixes problems with runtime errors).
+  7. Optionally, to make the builds faster, you can precompile bits/stdc++.h (More on this here: https://codeforces.com/blog/entry/79026?#comment-644988)
+  8. For convenience, make sure to enable save on build (Tools -> Save All on Build).
+  
+  This build uses C++ 17, so make sure you update your compiler. Or change the script to use older versions.
+
+  ***Optional:***:
+  * **Speed-up PowerShell:** In some cases powershell startup time might be too slow. To fix this, enter the following two commands one after another. This might take a few minutes to finish.
         ```
         Set-Alias ngen (Join-Path ([Runtime.InteropServices.RuntimeEnvironment]::GetRuntimeDirectory()) ngen.exe)
         ngen update
         ```
-  3. Clone the repository or download as zip and extract (To avoid the hassle of creating new files).
-  4. Create a new Build System in Sublime Text 3 using the code given in Build.txt file. Also change the path in the Build System according to where you put Script.ps1 file.
-  5. Keep "script.bat" file in the same directory as "Script.ps1"
-  6. Set the paths of input and output files in Script.ps1
-  7. Run fix.reg (fixes problems with runtime errors).
-  8. Optionally, to make the builds faster, you can precompile bits/stdc++.h (More on this here: https://codeforces.com/blog/entry/79026?#comment-644988)
-  9. For convenience, make sure to enable save on build (Tools -> Save All on Build).
-  
-  This build uses C++ 17, so make sure you update your compiler. Or change the script to use older versions.
 
 ## What does it cost:
    Probably a few hundred milliseconds per run, for the sake of convenience.
